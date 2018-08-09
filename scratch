@@ -26,7 +26,7 @@ def initial_round
   card_1 = deal_card
   card_2 = deal_card
   display_card_total(card_total = card_1 + card_2)
-  card_total 
+  card_total
 end
 
 def invalid_command
@@ -39,7 +39,7 @@ def hit?(card_total)
   if input != "h" && input != "s"
     invalid_command
     prompt_user
-  end  
+  end 
   if input == "h"
     new_card = deal_card
     card_total = card_total + new_card
