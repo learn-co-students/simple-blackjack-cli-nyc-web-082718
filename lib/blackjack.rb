@@ -43,7 +43,6 @@ def hit?(card_total)
   if input == "h"
     new_card = deal_card
     card_total = card_total + new_card
-    display_card_total(card_total)
     card_total
   end
   card_total
@@ -54,11 +53,12 @@ end
 # get every test to pass before coding runner below #
 #####################################################
 
- def runner
+def runner
   welcome
   card_total = initial_round
-  until card_total > 7
+  until card_total > 21
   hit?(card_total)
+  display_card_total(card_total)
   end 
   end_game(card_total)
 end
